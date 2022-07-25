@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  data:
+    mongodb:
+      uri: mongodb://admin:maq2022@localhost:27017/?authSource=admin
+      database: micro-imagen
+
+server:
+  port: 8092
+
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    path: /docs.html
+  packagesToScan: com.pragma.crecimiento.monolito.micro.imagenes.infraestructure.endpoint

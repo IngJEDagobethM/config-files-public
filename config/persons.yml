@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:33060/TalentPool?useSLL=false&serverTimezone=UTC&useLegacyDateTimeCode=false&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+    username: TalentPoolUser
+    password: talentpooluser
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+server:
+  port: 8091
+
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    path: /docs.html
+  packagesToScan: com.pragma.crecimiento.monolito.micro.personas.infraestructure.endpoint
