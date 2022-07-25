@@ -14,13 +14,19 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: false
-
 server:
   port: 8091
-
 springdoc:
   api-docs:
     path: /docs
   swagger-ui:
     path: /docs.html
   packagesToScan: com.pragma.crecimiento.monolito.micro.personas.infraestructure.endpoint
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8887/eureka
+    instance:
+      hostname: localhost
