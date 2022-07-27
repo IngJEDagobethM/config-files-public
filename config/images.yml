@@ -1,3 +1,5 @@
+server:
+  port: 8092
 spring:
   mvc:
     pathmatch:
@@ -6,8 +8,6 @@ spring:
     mongodb:
       uri: mongodb://admin:maq2022@localhost:27017/?authSource=admin
       database: micro-imagen
-server:
-  port: 8092
 springdoc:
   api-docs:
     path: /docs
@@ -18,7 +18,7 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    serviceUrl:
-      defaultZone: http://localhost:8887/eureka
+    service-url:
+      default-zone: http://localhost:8887/eureka
     instance:
       hostname: localhost
