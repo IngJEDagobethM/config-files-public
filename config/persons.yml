@@ -24,9 +24,5 @@ springdoc:
   packagesToScan: com.pragma.crecimiento.monolito.micro.personas.infraestructure.endpoint
 eureka:
   client:
-    fetchRegistry: true
-    registerWithEureka: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
-    instance:
-      hostname: localhost
